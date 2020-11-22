@@ -7,8 +7,11 @@
 
             <Label Text="Inicio de sesión"/>
 
-            <Entry x:Name="txtUsuario" Placeholder="Ingrese el usuario"/>
-            <Entry x:Name="txtClave" Placeholder="Ingrese la clave"/>
+            <Entry x:Name="txtUsuario" 
+                   Placeholder="Ingrese el usuario"/>
+            <Entry x:Name="txtClave" 
+                   Placeholder="Ingrese la clave"
+                   IsPassword="True"/>
 
             <Button x:Name="btnIngresar" Text="Ingresar" Clicked="btnIngresar_Clicked"/>
 
