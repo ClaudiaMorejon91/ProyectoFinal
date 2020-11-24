@@ -6,9 +6,9 @@
         <StackLayout>
 
             <Label Text="Inicio de sesión"/>
-
+            <Label Text="PROBANDO LOS CAMBIOS EN GITHUB" FontSize="Large"/>
             <Entry x:Name="txtUsuario" 
-                   Placeholder="Ingrese el usuario"/>
+                   Placeholder="Ingrese el usuario "/>
             <Entry x:Name="txtClave" 
                    Placeholder="Ingrese la clave"
                    IsPassword="True"/>
