@@ -34,5 +34,18 @@ namespace ProyectoFinal.Clases
             return Enumerable.Empty<User>(); 
         }
 
+        public async Task<IEnumerable<PetData>> listarMascotas()
+        {
+            HttpClient client = getClient();
+            var result = await client.GetAsync(URL + "getPet.php");
+            if (result.IsSuccessStatusCode)
+            {
+                string content = await result.Content.ReadAsStringAsync();
+                return JsonConvert.DeserializeObject<IEnumerable<PetData>>(content);
+            }
+            return Enumerable.Empty<PetData>();
+            
+        }
+
     }
 }

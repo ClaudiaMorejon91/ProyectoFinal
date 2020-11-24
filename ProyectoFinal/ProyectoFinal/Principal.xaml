@@ -3,13 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProyectoFinal.Principal">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        
+                        <StackLayout >
+                           
 
-            <Button x:Name="btnIngresar" Text="Ingresar" Clicked="btnIngresar_Clicked"/>
+                            <Button x:Name="btn_Ingresar" Clicked="btnIngresar_Clicked" Text="Mostrar usuario"/>
+
+                        </StackLayout>
+               
             
-        </StackLayout>
+        
+
+
+
     </ContentPage.Content>
 </ContentPage>
