@@ -1,8 +1,11 @@
-﻿using ProyectoFinal.Clases;
+﻿using Newtonsoft.Json;
+using ProyectoFinal.Clases;
 using ProyectoFinal.Utils;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,9 +17,12 @@ namespace ProyectoFinal
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Principal : ContentPage
     {
+        UserManager manager = new UserManager();
         public Principal()
         {
             InitializeComponent();
+           
+            
             
         }
 
@@ -24,6 +30,7 @@ namespace ProyectoFinal
         {
             try
             {
+                
                 UserData userData = new UserData();
                 var result = await userData.getUserData(Convert.ToInt32(Settings.IdUserLogged));
                 if (result.Count() > 0)
